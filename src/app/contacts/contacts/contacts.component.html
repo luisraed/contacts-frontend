@@ -1,0 +1,9 @@
+<div class="card card-small">
+    <span>{{ title }}</span>
+</div>
+
+<ul class="contact">
+  <li *ngFor="let contact of contacts">
+    <span class="badge">{{contact | contact}}</span>
+  </li>
+</ul>
