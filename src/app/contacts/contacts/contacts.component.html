@@ -2,8 +2,25 @@
     <span>{{ title }}</span>
 </div>
 
-<ul class="contact">
-  <li *ngFor="let contact of contacts">
-    <span class="badge">{{contact | contact}}</span>
-  </li>
-</ul>
+<div class="row">
+<table mat-table [dataSource]="contacts" class="mat-elevation-z8">
+  <ng-container matColumnDef="salutation">
+    <th mat-header-cell *matHeaderCellDef> Salutation </th>
+    <td mat-cell *matCellDef="let element"> {{element.salutation}} </td>
+  </ng-container>
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+  </ng-container>
+  <ng-container matColumnDef="telephoneNumber">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.telephoneNumber}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
+</table>
+</div>

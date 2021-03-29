@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Showing contact for {{ contact | contact }}</h2>
+<mat-dialog-content>
+<div>
+    <span>Salutation:</span>{{contact.salutation}}
+</div>
+<div>
+    <span>First Name: </span>{{contact.firstName}}
+</div>
+<div>
+    <span>Last Name:</span>{{contact.lastName}}
+</div>
+<div>
+    <span>Address Line 1:</span>{{contact.addressLine1}}
+</div>
+<div>
+    <span>Address Line 2:</span>{{contact.addressLine2}}
+</div>
+<div>
+    <span>City:</span>{{contact.city}}
+</div>
+<div>
+    <span>State:</span>{{contact.state}}
+</div>
+<div>
+    <span>ZIP Code:</span>{{contact.zipCode}}
+</div>
+<div>
+    <span>Email:</span>{{contact.emailAddress}}
+</div>
+<div>
+    <span>Phone Number:</span>{{contact.telephoneNumber}}
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
